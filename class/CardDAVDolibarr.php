@@ -993,7 +993,7 @@ class Dolibarr extends AbstractBackend implements SyncSupport {
 			foreach($uris as $cardUri)
 			{
 				if(strpos($cardUri, $typecth)>0)
-					$ids[] = ($cardUri*1);   // cardUri starts with contact id
+					$ids[] = ((int) $cardUri * 1);   // cardUri starts with contact id
 			}
 
 			$sqlWhere = ' AND s.rowid IN ('.implode(',', $ids).')';
