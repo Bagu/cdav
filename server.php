@@ -206,7 +206,7 @@ $authBackend = new DAV\Auth\Backend\BasicCallBack(function ($username, $password
 		debug_log("Authentication failed 1 for user $username with pass ".str_pad('', strlen($password), '*'));
 		return false;
 	}
-	if (!empty(user->societe_id))
+	if (!empty($user->societe_id))
 	{
 		debug_log("Authentication failed 2 for user $username with pass ".str_pad('', strlen($password), '*'));
 		return false;
